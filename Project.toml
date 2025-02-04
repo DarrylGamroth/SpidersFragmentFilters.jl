@@ -1,0 +1,18 @@
+name = "SpidersFragmentFilters"
+uuid = "8c1bab52-a7d1-42b0-bb60-b0a7d7edcd1b"
+authors = ["Darryl Gamroth <dgamroth@rubus.ca>"]
+version = "0.1.0"
+
+[deps]
+Aeron = "b850ffb1-6704-484e-996b-4710e2f097f0"
+Automa = "67c07d97-cdcb-5c2c-af73-a7f9c32a568b"
+ConcurrentUtilities = "f0e56b4a-5159-44fe-b623-3e5288b988bb"
+SpidersMessageCodecs = "9d30338e-3560-4e91-a403-22803ac6b660"
+UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+
+[compat]
+Aeron = "0.16.0"
+Automa = "1.1.0"
+ConcurrentUtilities = "2.4.3"
+SpidersMessageCodecs = "0.4.1"
+UUIDs = "1.10.0"
