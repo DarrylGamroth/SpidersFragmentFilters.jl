@@ -1,6 +1,6 @@
 using ConcurrentUtilities
 
-struct SessionIdFragmentFilter{F<:Aeron.AbstractFragmentHandler} <: Aeron.AbstractFragmentHandler
+mutable struct SessionIdFragmentFilter{F<:Aeron.AbstractFragmentHandler} <: Aeron.AbstractFragmentHandler
     fragment_handler::F
     accept_set::Set{Int64}
     deny_set::Set{Int64}

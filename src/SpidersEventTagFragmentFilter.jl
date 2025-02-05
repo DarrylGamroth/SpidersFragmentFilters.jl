@@ -2,7 +2,7 @@ using Automa
 using SpidersMessageCodecs
 using UUIDs
 
-struct SpidersEventTagFragmentFilter{T<:Aeron.AbstractFragmentHandler,V} <: Aeron.AbstractFragmentHandler
+mutable struct SpidersEventTagFragmentFilter{T<:Aeron.AbstractFragmentHandler,V} <: Aeron.AbstractFragmentHandler
     fragment_handler::T
     validator::V
 
