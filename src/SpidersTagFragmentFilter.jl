@@ -16,7 +16,7 @@ function (f::SpidersTagFragmentFilter)(clientd, buffer, header)
     spiders_header = SpidersMessageCodecs.SpidersMessageHeader(buffer,
         sbe_encoded_length(sbe_header),
         SpidersMessageCodecs.version(sbe_header))
-    tag = SpidersMessageCodecs.tag(AbstractString, spiders_header)
+    tag = SpidersMessageCodecs.tag(spiders_header, AbstractString)
     isnothing(f.validator(tag)) ? Aeron.on_fragment(f.fragment_handler)(clientd, buffer, header) : nothing
 end
 
