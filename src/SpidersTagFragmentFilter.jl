@@ -1,5 +1,4 @@
 using Automa
-using SpidersMessageCodecs
 using UUIDs
 
 mutable struct SpidersTagFragmentFilter{T<:Aeron.AbstractFragmentHandler,V} <: Aeron.AbstractFragmentHandler

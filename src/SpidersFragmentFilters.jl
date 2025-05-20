@@ -1,6 +1,7 @@
 module SpidersFragmentFilters
 
 using Aeron
+using SpidersMessageCodecs
 
 include("DecimatingFragmentFilter.jl")
 include("GatingFragmentFilter.jl")
