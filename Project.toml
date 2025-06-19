@@ -1,7 +1,7 @@
 name = "SpidersFragmentFilters"
 uuid = "8c1bab52-a7d1-42b0-bb60-b0a7d7edcd1b"
 authors = ["Darryl Gamroth <dgamroth@rubus.ca>"]
-version = "0.4.1"
+version = "0.4.2"
 
 [deps]
 Aeron = "b850ffb1-6704-484e-996b-4710e2f097f0"

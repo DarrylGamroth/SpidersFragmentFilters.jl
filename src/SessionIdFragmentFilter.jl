@@ -10,8 +10,10 @@ end
 
 function (f::SessionIdFragmentFilter)(clientd, buffer, header)
     readlock(f.lock)
-    deny = Aeron.session_id(header) in f.deny_set
-    accept = isempty(f.accept_set) || Aeron.session_id(header) in f.accept_set
+    session_id = Aeron.values(header).session_id
+
+    deny = session_id in f.deny_set
+    accept = isempty(f.accept_set) || session_id in f.accept_set
     readunlock(f.lock)
     !deny && accept && Aeron.on_fragment(f.fragment_handler)(clientd, buffer, header)
 end
