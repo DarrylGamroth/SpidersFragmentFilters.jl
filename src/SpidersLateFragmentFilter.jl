@@ -1,5 +1,3 @@
-using Clocks
-
 mutable struct SpidersLateFragmentFilter{F1<:Aeron.AbstractFragmentHandler,F2<:Aeron.AbstractFragmentHandler,C<:AbstractClock} <: Aeron.AbstractFragmentHandler
     const fragment_handler::F1
     const late_fragment_handler::F2
